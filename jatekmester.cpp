@@ -36,6 +36,7 @@ bool JatekMester::lep(int sor, int oszlop) {
     if (_palya[sor][oszlop] != SENKI) return false;
     _palya[sor][oszlop] = _aktualis_jatekos;
     if (ellenoriz_irany(sor, oszlop, 0, 1) ||
+        ellenoriz_irany(sor, oszlop, 1, 0) ||
         ellenoriz_irany(sor, oszlop, 1, 1) ||
         ellenoriz_irany(sor, oszlop, 1, -1)) {
         _jatek_vege = true;
